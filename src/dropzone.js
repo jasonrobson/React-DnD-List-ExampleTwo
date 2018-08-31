@@ -10,9 +10,7 @@ const dropTarget = {
 
 const collect = (connect, monitor) => {
   return {
-    connectDropTarget: connect.dropTarget(),
-    getItem: monitor.getItem(),
-    didDrop: monitor.didDrop()
+    connectDropTarget: connect.dropTarget()
   };
 };
 
@@ -25,6 +23,7 @@ class Droppable extends Component {
           style={{
             margin: 15,
             width: 200,
+            minHeight: 100,
             backgroundColor: "red",
             padding: 15
           }}

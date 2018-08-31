@@ -30,7 +30,7 @@ class Lists extends Component {
     return (
       <DragDropProvider>
         <DragDropConsumer>
-          {({ items, onUpdateItem, onModifyItem }) => {
+          {({ items, onUpdateItem }) => {
             const filters = getFilters(items);
             const filteredItems = getFilteredItems(filters, items);
             return filteredItems.map((v, i) => (
