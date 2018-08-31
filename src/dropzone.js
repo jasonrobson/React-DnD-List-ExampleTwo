@@ -18,15 +18,15 @@ const collect = (connect, monitor) => {
 
 class Droppable extends Component {
   render() {
-    const { children, connectDropTarget, getItem, didDrop } = this.props;
+    const { children, connectDropTarget } = this.props;
     return connectDropTarget(
       <div>
         <div
           style={{
             margin: 15,
             width: 200,
-            height: 200,
-            backgroundColor: "red"
+            backgroundColor: "red",
+            padding: 15
           }}
         >
           {children}
