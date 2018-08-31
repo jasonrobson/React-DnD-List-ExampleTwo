@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import _ from "lodash";
 import PropTypes from "prop-types";
 import { DragSource } from "react-dnd";
-import { DragDropConsumer } from "./DragDropContext";
 import { ItemTypes } from "./constants";
 import "./styles.css";
 
@@ -60,14 +58,5 @@ class Draggable extends Component {
   }
 }
 
-// <DragDropConsumer>
-//   {({ onModifyItem }) => {
-//     onModifyItem()
-//   }
-//   }
-// </DragDropConsumer>
-
 //the wrapped component:
-export default _.flow(DragSource(ItemTypes.THING, dragSourceNode, collect))(
-  Draggable
-);
+export default DragSource(ItemTypes.THING, dragSourceNode, collect)(Draggable);

@@ -1,16 +1,9 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { DropTarget } from "react-dnd";
 import { ItemTypes } from "./constants";
 
 const dropTarget = {
   drop(props, monitor) {
-    // console.log(monitor);
-    // <DragDropConsumer>
-    //   {({ onModifyItem }) => {
-    //     onModifyItem()
-    //   }
-    //   }
-    // </DragDropConsumer>
     return { droppableId: props.droppableId };
   }
 };
@@ -28,16 +21,6 @@ class Droppable extends Component {
     const { children, connectDropTarget, getItem, didDrop } = this.props;
     return connectDropTarget(
       <div>
-        {
-          // didDrop ? (
-          //   <DragDropConsumer>
-          //     {({ onModifyItem }) => {
-          //       // onModifyItem(getItem);
-          //       console.log(getItem);
-          //     }}
-          //   </DragDropConsumer>
-          // ) : null
-        }
         <div
           style={{
             margin: 15,
