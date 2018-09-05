@@ -25,7 +25,7 @@ const Context = createContext({
 
 export class DragDropProvider extends Component {
   state = {
-    items: getItems(20),
+    items: getItems(1200),
     onUpdateItem: this.onUpdateItem
   };
 

@@ -25,7 +25,8 @@ class Droppable extends Component {
             width: 200,
             minHeight: 100,
             backgroundColor: "red",
-            padding: 15
+            padding: 15,
+            float: "left"
           }}
         >
           {children}
